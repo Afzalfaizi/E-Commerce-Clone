@@ -1,4 +1,5 @@
-import Products from "@/components/Product";
+import Cart from "@/components/Cart";
+import Product from "@/components/Product";
 import Image from "next/image";
 
 const products: Product[] = [
@@ -24,9 +25,10 @@ export default function Home() {
         <h1 className=" text-3xl">E-Commerce Cart System</h1>
         <div className=" grid grid-cols-3">
           {products.map((product) => (
-            <Products key={product.id} product={product} />
+            <Product key={product.id} product={product} />
           ))}
         </div>
+        <Cart />
       </div>
     </main>
   );
